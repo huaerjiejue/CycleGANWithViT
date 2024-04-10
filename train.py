@@ -82,7 +82,6 @@ class Dataset(Dataset):
         return img
 
 
-# TODO：更改数据集路径
 photo_dir = "data/photo"
 monet_dir = "data/monet"
 photo_dataset = Dataset(photo_dir, get_transforms())
@@ -122,7 +121,6 @@ def sample_images(real_A, real_B, epoch, figside=4):
 
 
 # Training
-# TODO: 更改训练文件使得photo_dataloader和monet_dataloader长度相等
 for epoch in range(n_epochs):
     assert len(photo_dataloader) == len(
         monet_dataloader
